@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta information including authors -->
+    <meta name="Author" content="Jovian Anderson (2203343), Richard Stewart (2204031), Shane Stephens (2008361)">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Math Game </title>
+    <!-- Link to external stylesheet and JavaScript file -->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <!-- Preloader for loading animation -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <div class="wrapper">
+        <!-- Registration form -->
+        <form name="PersonalInformation" id="info" action="mailto:" method="" onsubmit="return false">
+            <fieldset id="f1" class="fieldset">
+                <h1>Math Game</h1>
+                <!-- Personal information input fields -->
+                <div class="input-box">
+                    <div class="input-field">
+                        <label for="fname">First Name:</label>
+                        <input name="fname" id="fname" type="text" placeholder="First Name">
+                    </div>
+                    <div class="input-field">
+                        <label for="lname">Last Name:</label>
+                        <input name="lname" id="lname" type="text" placeholder="Last Name">
+                    </div>
+                </div>
+
+                <!-- Email and date of birth input fields -->
+                <div class="input-box">
+                    <div class="input-field">
+                        <label for="email">Email:</label>
+                        <input name="email" id="email" type="email" placeholder="Email" pattern=".*@gmail.com"
+                            title="Please enter an email ending with @gmail.com">
+                    </div>
+                    <div class="input-field">
+                        <label for="dob">Date of Birth:</label>
+                        <!-- Date of birth input field with placeholder -->
+                        <input name="dob" id="dob" type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
+                            placeholder="Date of Birth">
+                    </div>
+                </div>
+
+                <!-- Age and gender input fields -->
+                <div class="input-box">
+                    <div class="input-field">
+                        <label for="age">Age:</label>
+                        <!-- Disabled input field for age -->
+                        <input name="age" id="age" placeholder="Age" type="text" disabled>
+                    </div>
+                    <div class="input-field">
+                        <label for="gender">Gender:</label>
+                        <!-- Dropdown for selecting gender -->
+                        <select id="gender" name="gender" required>
+                            <option value="m">Male</option>
+                            <option value="f">Female</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Register and reset buttons -->
+                <button type="submit" class="btn" id="register" onclick="Register()">Register</button>&nbsp;&nbsp;
+                <input id="reset" class="btn" type="reset"></input>&nbsp;&nbsp;
+            </fieldset>
+        </form>
+
+        <!-- Start button for the game -->
+        <button id="start" type="button" class="btn" onclick="PlayGame()" style="display: none;">Start</button>&nbsp;&nbsp;
+
+        <!-- Game form -->
+        <form name="Game">
+            <fieldset id="f2" style="display: none;">
+                <div class="gamearea">
+                    <legend class="legend">Game Area</legend>
+
+                    <!-- Equation input fields and images -->
+                    <div class="equation">
+                        <label for="num1">Number 1:</label>
+                        <input name="num1" id="num1" type="text" size="5" placeholder="" disabled></input>
+                    </div>
+                    <div class="equation">
+                        <img src="images/multiply.png" alt="multiply">
+                    </div>
+                    <div class="equation">
+                        <label for="num2">Number 2:</label>
+                        <input name="num2" id="num2" type="text" size="5" placeholder="" disabled></input>
+                    </div>
+                    <div class="equation">
+                        <img src="images/equal.png" alt="equal">
+                    </div>
+                    <div class="equation">
+                        <label for="ans">Answer:</label>
+                        <input name="ans" id="ans" type="text" placeholder="" disabled></input>
+                    </div>
+                    <div class="equation">
+                        <button id="accept" type="button" onclick="CheckAnswer()" disabled>Accept</button>&nbsp;&nbsp;
+                    </div>
+                </div>
+
+                <!-- Game control buttons -->
+                <div class="buttons">
+                    <button id="next" type="button" onclick="PlayGame()" disabled>Next</button>&nbsp;&nbsp;
+                    <button id="end" type="button" onclick="EndGame()" disabled>End</button>&nbsp;&nbsp;
+                    <button id="percentscore" type="button" onclick="findPercentageScore()">Percentage Score</button>
+                    <button id="showall" type="button" onclick="showAll()">Show All Players</button>
+                </div>
+
+                <!-- Player statistics display -->
+                <div class="stats">
+                    <h2 class="h2">All Players</h2>
+                    <textarea name="" id="showallplayers" rows="7"></textarea>
+                    <textarea name="" id="showpercentage" rows="7" disabled></textarea>
+                </div>
+                <div class="gender-container">
+        
+                    <div id="gender-bar-container">
+                        <div id="gender-bar"></div>
+                    </div>
+                    <div class="gender-label">    
+                        <div class="gender-name">
+                            <h3>Male</h3>
+                        </div>
+                        <div class="gender-name">
+                            <h3>Female</h3>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>

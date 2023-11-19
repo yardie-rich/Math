@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('images/background.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+label {
+    display: none;
+}
+
+fieldset {
+    border: none;
+}
+
+.wrapper {
+    width: 800px;
+    background: rgba(225, 225, 225, .1);
+    border: 2px solid rgba(225, 225, 225, .2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    backdrop-filter: blur(50px);
+    border-radius: 10px;
+    color: #fff;
+    padding: 40px 35px 40px;
+}
+.wrapper h3{
+    text-align: center;
+}
+
+.wrapper h1 {
+    font-size: 36;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.wrapper .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.input-box .input-field {
+    position: relative;
+    width: 48%;
+    height: 50px;
+    margin: 13px 0;
+}
+
+.input-box .input-field input, select {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 6px;
+    padding: 15px 15px 15px 40px;
+}
+
+.input-box .input-field input::placeholder {
+    color: #fff;
+}
+
+.wrapper .btn,
+.start #start {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.wrapper .btn:hover,
+.start #start:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+select option {
+    color: #333;
+}
+
+legend {
+    display: none;
+}
+
+#f2 {
+    display: flex;
+    border: none;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#id {
+    width: 100px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 30px;
+}
+
+.buttons button,
+.equation button {
+    width: 100px;
+    height: 50px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.gamearea {
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+    background: none;
+    color: #fff;
+}
+
+input {
+    height: 50px;
+    background: none;
+    color: #fff;
+    font-size: 50px;
+    padding-right: 20px;
+}
+
+#num1,
+#num2 {
+    width: 60px;
+    border: none;
+}
+
+#num2 {
+    padding-left: 10px;
+}
+
+#ans {
+    width: 100px;
+    border-radius: 10px;
+    border-color: #fff;
+}
+
+.equation {
+    text-align: center;
+    padding: 10px;
+}
+
+.buttons {
+    padding-top: 40px;
+}
+
+.stats {
+    text-align: center;
+}
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/background.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.loader {
+    border: 15px solid #f3f3f3;
+    border-top: 15px solid #3498db;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+#gender-bar-container {
+    width: 80%;
+    margin: 20px auto;
+    position: relative;
+    height: 30px;
+    background-color: pink;
+}
+#gender-bar {
+    height: 100%;
+    background-color: #3498db;
+    width: 50%; /* Initial value */
+    transition: width 0.3s;
+}
+
+#gender-label {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+.gender-label{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+.gender-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.male{
+    width: 10px;
+    height: 10px;
+    background-color: blue;
+}
+.gender-name{
+    display: flex;
+}
