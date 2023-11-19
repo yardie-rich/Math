@@ -31,7 +31,6 @@ function Register() {
 
     // Hide and disable the registration form
     hideForm();
-    updateChart();
     DisableEntryForm();
 
     return true;
@@ -75,20 +74,6 @@ function findPercentageScore() {
     document.getElementById("showallplayers").value = resultText;
 }
 
-function updateChart() {
-    var genderSelect = document.getElementById("gender");
-    var selectedGender = genderSelect.value;
-
-    if (selectedGender === "m" && femaleCount > 0) {
-        maleCount++;
-        femaleCount--; // Typo: should be femaleCount++
-    } else if (selectedGender === "f" && maleCount > 0) {
-        maleCount--; // Typo: should be maleCount++
-        femaleCount++;
-    }
-
-    document.getElementById("maleCount").innerText = maleCount;
-}
 
 // Function to start the game
 function PlayGame() {
